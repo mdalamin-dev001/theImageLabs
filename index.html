@@ -184,6 +184,10 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
 .guide,.foot{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1{font-size:clamp(15px,5.2vw,20px)}.nm{min-width:0}
 @media(max-width:380px){.top,.main{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}}
+.app{max-width:1100px;margin-left:auto;margin-right:auto}
+.guide{max-width:1100px}
+.guide h2{break-after:avoid}.gl li,.guide details{break-inside:avoid}
+@media(min-width:900px){.guide{columns:2;column-gap:44px}.guide>h2:first-child{margin-top:0}}
 @media(prefers-reduced-motion:no-preference){.btn,.chip{transition:background .12s}}
 </style>
 <link rel="canonical" href="https://theimagelabs.pages.dev/">
@@ -326,6 +330,6 @@ h1{font-size:clamp(15px,5.2vw,20px)}.nm{min-width:0}
 </footer>
 <dialog id="dlg"><h2 id="dt"></h2><div id="db"></div><button class="btn main" id="dx" type="button" data-i="close">Close</button></dialog>
 
-<script src="htmls.js?v=202611251043"></script>
+<script src="htmls.js?v=202611251701"></script>
 </body>
 </html>
