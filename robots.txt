@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theimagelabs.pages.dev/sitemap.xml
