@@ -3,7 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>theImageLabs</title>
+<title>Photo Resizer for University Admission &amp; Forms | theImageLabs</title>
+<meta name="description" content="Free advanced photo resizer for university admission applications and official forms. Set exact pixels and KB limit, keep high quality. Photo and signature. No upload.">
+<meta name="keywords" content="photo resizer, resize photo for university admission, admission test application photo, resize image to 50kb, 300x300 photo, 300x400 photo, signature resize 300x80, passport photo size, compress image to kb, JPG PNG WebP resizer">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#2745e6">
+<meta property="og:type" content="website"><meta property="og:site_name" content="theImageLabs">
+<meta property="og:title" content="Photo Resizer for University Admission &amp; Official Forms">
+<meta property="og:description" content="Resize photo and signature to exact pixels and KB with high quality. Free, private, works in your browser.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","url":"https://theimagelabs.pages.dev/","name":"theImageLabs Resizer","description":"Free advanced photo and signature resizer for university admission applications and official forms. Exact pixel size, KB limit, JPG, PNG and WebP.","applicationCategory":"MultimediaApplication","operatingSystem":"Any","inLanguage":["en","bn"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Archivo:wght@500;600;700;800&display=swap">
 <style>
 :root{
@@ -16,12 +25,14 @@
   --acc:#7d92ff;--acc-ink:#0d1220;--ok:#4fd195;--bad:#ff8b7a;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0f151a;--panel:#18212a;--room:#0a0e12;--ink:#e8eef2;--mute:#8fa1ad;--line:#2f3d49;--acc:#7d92ff;--acc-ink:#0d1220;--ok:#4fd195;--bad:#ff8b7a;color-scheme:dark}
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;overflow:hidden}
+html{scroll-behavior:smooth}html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font:500 14px/1.45 'Archivo','Hind Siliguri',system-ui,sans-serif;-webkit-text-size-adjust:100%}
-.app{height:100%;display:flex;flex-direction:column}
+.app{height:100vh;height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:430px;display:flex;flex-direction:column}
 .top{display:flex;align-items:center;gap:8px;padding:10px 14px}
 h1{margin:0;font:800 20px/1 'Archivo','Hind Siliguri',sans-serif;letter-spacing:-.03em;flex:1;display:flex;align-items:center;gap:9px}
-h1 svg{flex:none;display:block}
+.lgi{flex:none;display:block;aspect-ratio:1/1;width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:#fff url(data:image/webp;base64,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) center/74% no-repeat}.lgi.sm{width:28px;height:28px}
+.nm{display:flex;flex-direction:column;overflow:visible;line-height:1.1}
+.nm small{font:600 10.5px 'Archivo',sans-serif;letter-spacing:.16em;color:var(--mute);margin-top:2px}
 .btn{font:600 13px 'Archivo','Hind Siliguri',sans-serif;border:1.5px solid var(--ink);background:var(--panel);color:var(--ink);padding:7px 12px;border-radius:5px;cursor:pointer;min-height:36px}
 .btn:hover{background:color-mix(in srgb,var(--hl) 35%,var(--panel))}
 .btn.main{background:var(--acc);color:var(--acc-ink);border-color:var(--acc);font-weight:700;padding:9px 18px}
@@ -43,7 +54,18 @@ h1 svg{flex:none;display:block}
 .top{gap:6px}h1{min-width:0}h1 span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .chg{position:absolute;top:8px;right:8px;z-index:2;font-size:12px;min-height:28px;padding:3px 10px}
 .note2{margin:0 0 12px;padding:8px 10px;border-left:3px solid var(--hl);background:color-mix(in srgb,var(--hl) 18%,var(--panel));font-size:12.5px;line-height:1.45;border-radius:0 4px 4px 0}
-.foot{flex:none;display:flex;justify-content:center;flex-wrap:wrap;gap:2px 14px;padding:2px 14px 8px;font-size:11.5px;color:var(--mute);text-align:center}
+.foot{margin-top:26px;border-top:1.5px solid var(--ink);background:var(--panel);padding:22px 16px 26px;text-align:center;color:var(--mute);font-size:13px}
+.fbrand{display:flex;align-items:center;justify-content:center;gap:9px;color:var(--ink);font:800 17px 'Archivo',sans-serif;letter-spacing:-.02em}
+.foot p{margin:6px 0 0}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;margin:14px 0 12px}
+.flinks a,.flinks button{font:600 13.5px 'Archivo','Hind Siliguri',sans-serif;color:var(--ink);background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.flinks a:hover,.flinks button:hover{text-decoration-color:var(--acc);color:var(--acc)}
+.tg{display:inline-flex;align-items:center;margin-top:10px;padding:7px 14px;border:1.5px solid var(--ink);border-radius:6px;color:var(--ink);background:var(--bg);font:700 13px 'Archivo',sans-serif;text-decoration:none}
+.tg:hover{background:color-mix(in srgb,var(--hl) 35%,var(--bg))}
+.foot .fcopy{margin-top:16px;font-size:12px}
+dialog{max-width:520px;width:calc(100% - 28px);max-height:80vh;overflow:auto;background:var(--panel);color:var(--ink);border:1.5px solid var(--ink);border-radius:8px;padding:18px}
+dialog::backdrop{background:rgba(10,16,22,.55)}
+dialog h2{margin:0 0 10px;font-size:17px}dialog ul{margin:0 0 14px;padding-left:18px;color:var(--mute);font-size:13.5px}dialog li{margin-bottom:6px}
 .main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:14px;padding:0 14px 14px}
 .left{display:flex;flex-direction:column;gap:10px;min-height:0;min-width:0}
 .stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:var(--room);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden}
@@ -92,6 +114,18 @@ canvas.grab{cursor:grabbing}
 .fn{display:flex;align-items:center;gap:4px}
 .fn input{flex:1;min-width:0;font:600 13px 'Archivo','Hind Siliguri',sans-serif;padding:7px 9px;border:1.5px solid var(--ink);border-radius:5px;background:var(--bg);color:var(--ink)}
 .fn b{font:700 13px 'Archivo',sans-serif;color:var(--mute)}
+.more{flex:none;align-self:center;border:0;background:none;color:var(--mute);font:600 12px 'Archivo','Hind Siliguri',sans-serif;padding:0 12px 5px;cursor:pointer}
+.guide{max-width:760px;margin:0 auto;padding:18px 16px 6px}
+.guide h2{font-size:17px;margin:16px 0 10px}
+.gl{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.gl li{display:flex;gap:12px;background:var(--panel);border:1.5px solid var(--line);border-radius:6px;padding:11px 12px}
+.gl b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:800 13px 'Archivo',sans-serif}
+.gl strong{font-size:14px}.gl p{margin:2px 0 0;color:var(--mute);font-size:13px}
+.guide details{background:var(--panel);border:1.5px solid var(--line);border-radius:6px;padding:10px 12px;margin-bottom:8px}
+.guide summary{cursor:pointer;font-weight:700;font-size:14px}
+.guide details p{margin:8px 0 0;color:var(--mute);font-size:13px}
+.guide>p{color:var(--mute);font-size:13.5px;margin:0 0 6px}
+.uses{margin:0;padding-left:18px;color:var(--mute);font-size:13.5px}.uses li{margin-bottom:4px}
 .sec{display:none}.sec.on{display:block}
 h2{margin:0 0 9px;font-size:14px;font-weight:700}
 .row{display:flex;gap:10px;align-items:end;flex-wrap:wrap}
@@ -135,14 +169,30 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
   h1{font-size:19px}
   .top{padding:8px 10px}
 }
-@media(max-width:380px){h1{font-size:17px;gap:7px}h1 svg{width:26px;height:26px}.ib{width:24px;min-height:24px}.hist button{width:25px}.seg button{padding:2px 6px}.top{padding:8px;gap:5px}}
+@media(max-width:380px){h1{font-size:17px;gap:7px}.lgi:not(.sm){width:28px;height:28px}.ib{width:24px;min-height:24px}.hist button{width:25px}.seg button{padding:2px 6px}.top{padding:8px;gap:5px}}
+@media(max-width:760px) and (max-height:740px){
+  .top{padding:6px 10px}h1{font-size:17px}.size{font-size:19px}.bar{min-height:50px;padding:6px 10px}.meta{font-size:11.5px}
+  .steps b{width:22px;height:22px;font-size:12px}.steps li+li::before{top:11px}.steps button{font-size:11px}
+  .panel{height:clamp(190px,27vh,215px)}
+  .chip{font-size:11.5px;padding:2px 8px}.mode b{font-size:11.5px}
+  input[type=number],select{font-size:13px;padding:4px 7px}.hint{font-size:11px}
+}
+@media(max-width:760px) and (max-height:620px){
+  .hint,.tip{display:none}.panel{height:clamp(150px,30vh,185px)}.nav .btn{min-height:28px}.size{font-size:17px}.bar{min-height:44px}
+}
 @media(prefers-reduced-motion:no-preference){.btn,.chip{transition:background .12s}}
 </style>
+<link rel="canonical" href="https://theimagelabs.pages.dev/">
+<meta property="og:url" content="https://theimagelabs.pages.dev/">
+<meta property="og:image" content="https://theimagelabs.pages.dev/logo.png">
+<meta name="twitter:image" content="https://theimagelabs.pages.dev/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 </head>
 <body>
 <div class="app">
 <div class="top">
-  <h1 translate="no"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--acc)"/><path d="M7 12V7h5M25 12V7h-5M7 20v5h5M25 20v5h-5" stroke="var(--acc-ink)" stroke-width="2.2" fill="none" stroke-linecap="square"/><path d="M10.5 21.5L14.5 16l3 3.5 2-2.5 3 4.5z" fill="var(--hl)"/><circle cx="20.5" cy="12.5" r="1.8" fill="var(--hl)"/></svg><span>theImageLabs</span></h1>
+  <h1 translate="no"><span class="lgi" aria-hidden="true"></span><span class="nm">theImageLabs<small>Resizer</small></span></h1>
   <div class="hist" role="group" aria-label="History"><button id="undo" type="button" disabled aria-label="Undo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 2.5 6.5 6 10"/><path d="M2.5 6.5h7a3.5 3.5 0 0 1 0 7H6"/></svg></button><button id="redo" type="button" disabled aria-label="Redo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3l3.5 3.5L10 10"/><path d="M13.5 6.5h-7a3.5 3.5 0 0 0 0 7H10"/></svg></button></div>
   <div class="lgw"><button class="btn ib lg" id="lang" type="button" aria-label="Language">বাং</button></div>
   <button class="btn ib" id="theme" type="button" aria-label="Theme">◐</button>
@@ -238,9 +288,40 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
     <div class="nav"><button class="btn" id="back" type="button" data-i="back">Back</button><button class="btn main" id="next" type="button">Next</button></div>
   </div>
 </div>
-<footer class="foot"><span translate="no">© 2026 theImageLabs</span><span data-i="foot">Your photos stay on your device. Nothing is uploaded.</span></footer>
+<button class="more" id="more" type="button"><span data-i="more">User guide</span> ↓</button>
 </div>
 
-<script src="htmls.js"></script>
+<section class="guide" id="guide">
+  <h2 data-i="about_t">Free photo resizer for university admission and official forms</h2>
+  <p data-i="about_p">theImageLabs is an advanced photo and signature resizer. Set the exact width and height in pixels, choose JPG, PNG or WebP, and keep the file under your KB limit while keeping the quality as high as possible. It works in your browser, so your photo never leaves your device.</p>
+  <h2 data-i="use_t">Made for</h2>
+  <ul class="uses"><li data-i="u1">University admission test application photos</li><li data-i="u2">Job, scholarship and exam application forms</li><li data-i="u3">Government and official portals (ID, passport, board, bank)</li><li data-i="u4">Signature and thumb images (for example 300×80)</li></ul>
+  <h2 data-i="g_t">How to use</h2>
+  <ol class="gl">
+    <li><b>1</b><div><strong data-i="g1t">Size</strong><p data-i="g1d">Pick a preset (300×300, 300×400, or 300×80 for a signature) or type your own width and height.</p></div></li>
+    <li><b>2</b><div><strong data-i="g2t">Fit</strong><p data-i="g2d">Fit keeps the whole photo. Auto fill crops it to fill the frame. Manual lets you drag and zoom. The arrow buttons nudge 1 pixel at a time.</p></div></li>
+    <li><b>3</b><div><strong data-i="g3t">Format and KB</strong><p data-i="g3d">Choose JPG, PNG or WebP and the largest file size in KB. Quality lowers by itself to stay under it.</p></div></li>
+    <li><b>4</b><div><strong data-i="g4t">Download</strong><p data-i="g4d">The file is saved with its name, size and time, like photo-300x300px-1043am-261126.jpg.</p></div></li>
+  </ol>
+  <h2 data-i="tip_t">Tips for high quality</h2>
+  <p data-i="tip_p">Start from the original photo, not a screenshot. Use JPG for forms. Set a realistic KB limit (for example 50–100 KB for 300×400). Do not enlarge a small photo. Use Fit or Manual so the face is never cropped.</p>
+  <h2 data-i="q_t">Common questions</h2>
+  <details><summary data-i="q1">Why does the quality look lower?</summary><p data-i="a1">Resizing and compressing always lowers quality a little, in every tool. Official sites and apps accept it, and nobody zooms into your photo on the web.</p></details>
+  <details><summary data-i="q2">It will not go under my KB limit</summary><p data-i="a2">Use JPG or WebP (PNG quality cannot be lowered), or make the width and height smaller.</p></details>
+  <details><summary data-i="q3">Which format for forms?</summary><p data-i="a3">JPG is accepted almost everywhere. Use PNG only when you need a transparent background.</p></details>
+  <details><summary data-i="q5">What size do admission applications ask for?</summary><p data-i="a5">It differs by university and form. Photos are commonly around 300×300 or 300×400 pixels and signatures around 300×80 pixels, often with a 20–100 KB limit. Always follow the notice of your university or portal.</p></details>
+  <details><summary data-i="q4">Are my photos uploaded?</summary><p data-i="a4">No. Everything happens in your browser, on your device.</p></details>
+</section>
+<footer class="foot">
+  <div class="fbrand" translate="no"><span class="lgi sm" aria-hidden="true"></span>theImageLabs</div>
+  <p data-i="fabout">Free photo resizer for forms and applications.</p>
+  <nav class="flinks"><button type="button" data-d="tos" data-i="f_tos">Terms of Service</button><button type="button" data-d="priv" data-i="f_priv">Privacy</button><button type="button" id="fguide" data-i="f_guide">Guidelines</button><a href="https://t.me/adamzampas" target="_blank" rel="noopener" data-i="f_contact">Contact</a></nav>
+  <p data-i="fcontact">Suggestion, complaint or advice? Message us on Telegram.</p>
+  <a class="tg" href="https://t.me/adamzampas" target="_blank" rel="noopener" data-i="f_tg">Message on Telegram</a>
+  <p class="fcopy"><span translate="no">© 2026 theImageLabs</span> · <span data-i="foot">Your photos stay on your device. Nothing is uploaded.</span></p>
+</footer>
+<dialog id="dlg"><h2 id="dt"></h2><div id="db"></div><button class="btn main" id="dx" type="button" data-i="close">Close</button></dialog>
+
+<script src="htmls.js?v=202611251020"></script>
 </body>
 </html>
