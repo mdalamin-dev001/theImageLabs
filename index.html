@@ -84,6 +84,11 @@ canvas.grab{cursor:grabbing}
 .sum dt{color:var(--mute)}.sum dd{margin:0;font-weight:700;text-align:right}
 .big{width:100%;font-size:13px;padding:10px 8px}
 .two{display:flex;gap:8px}.two .big{flex:1}
+.alignrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;font:700 13px 'Archivo','Hind Siliguri',sans-serif}
+.al{display:flex;gap:6px}
+.al button{width:36px;height:28px;border:1.5px solid var(--ink);border-radius:6px;background:var(--panel);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.al button:hover{background:color-mix(in srgb,var(--hl) 40%,var(--panel))}
+.al svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .fn{display:flex;align-items:center;gap:4px}
 .fn input{flex:1;min-width:0;font:600 13px 'Archivo','Hind Siliguri',sans-serif;padding:7px 9px;border:1.5px solid var(--ink);border-radius:5px;background:var(--bg);color:var(--ink)}
 .fn b{font:700 13px 'Archivo',sans-serif;color:var(--mute)}
@@ -190,11 +195,18 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
       <section class="sec" data-step="2">
         <h2 data-i="h2">Fit the photo</h2><p class="hint" data-i="p2">Decide how the photo sits inside the frame.</p>
         <div class="modes">
-          <label class="mode"><input type="radio" name="mode" value="fill" checked><span><b data-i="fill">Auto fill</b><small data-i="fillD">Fills the frame, extra edges are cropped from the center</small></span></label>
-          <label class="mode"><input type="radio" name="mode" value="fit"><span><b data-i="fitm">Fit inside</b><small data-i="fitD">Whole photo stays visible, empty space gets the background color</small></span></label>
+          <label class="mode"><input type="radio" name="mode" value="fill"><span><b data-i="fill">Auto fill</b><small data-i="fillD">Fills the frame, extra edges are cropped from the center</small></span></label>
+          <label class="mode"><input type="radio" name="mode" value="fit" checked><span><b data-i="fitm">Fit inside</b><small data-i="fitD">Whole photo stays visible, empty space gets the background color</small></span></label>
           <label class="mode"><input type="radio" name="mode" value="manual"><span><b data-i="man">Manual</b><small data-i="manD">Drag to move, slider or pinch to zoom</small></span></label>
         </div>
         <div class="zoom"><span data-i="zoom">Zoom</span><input id="zoom" type="range" min="20" max="500" value="100"><output id="zv">100%</output></div>
+        <div class="alignrow"><span data-i="align">Align</span><div class="al">
+          <button type="button" data-a="l" aria-label="Left"><svg viewBox="0 0 16 16"><path d="M2 2v12M6 8h8M9 5 6 8l3 3"/></svg></button>
+          <button type="button" data-a="t" aria-label="Top"><svg viewBox="0 0 16 16"><path d="M2 2h12M8 6v8M5 9l3-3 3 3"/></svg></button>
+          <button type="button" data-a="c" aria-label="Center"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v3M8 12v3M1 8h3M12 8h3"/></svg></button>
+          <button type="button" data-a="b" aria-label="Bottom"><svg viewBox="0 0 16 16"><path d="M2 14h12M8 10V2M5 7l3 3 3-3"/></svg></button>
+          <button type="button" data-a="r" aria-label="Right"><svg viewBox="0 0 16 16"><path d="M14 2v12M10 8H2M7 5l3 3-3 3"/></svg></button>
+        </div></div>
         <div class="row" style="margin-top:11px;align-items:center">
           <label class="f" style="flex-direction:row;align-items:center;gap:8px"><span data-i="bg">Background</span><input id="bg" type="color" value="#ffffff"></label>
           <label class="chk" id="trw"><input id="tr" type="checkbox"><span data-i="tr">Transparent</span></label>
