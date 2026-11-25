@@ -180,6 +180,10 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
 @media(max-width:760px) and (max-height:620px){
   .hint,.tip{display:none}.panel{height:clamp(150px,30vh,185px)}.nav .btn{min-height:28px}.size{font-size:17px}.bar{min-height:44px}
 }
+.top,.main{padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}
+.guide,.foot{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:clamp(15px,5.2vw,20px)}.nm{min-width:0}
+@media(max-width:380px){.top,.main{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}}
 @media(prefers-reduced-motion:no-preference){.btn,.chip{transition:background .12s}}
 </style>
 <link rel="canonical" href="https://theimagelabs.pages.dev/">
@@ -322,6 +326,6 @@ input[type=color]{width:42px;height:34px;padding:0;border:1.5px solid var(--ink)
 </footer>
 <dialog id="dlg"><h2 id="dt"></h2><div id="db"></div><button class="btn main" id="dx" type="button" data-i="close">Close</button></dialog>
 
-<script src="htmls.js?v=202611251020"></script>
+<script src="htmls.js?v=202611251043"></script>
 </body>
 </html>
