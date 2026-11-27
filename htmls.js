@@ -76,7 +76,7 @@ async function encode(){
   $('dl').disabled=false;renderSum(b,q,fn,limit);updateNav();
 }
 function load(file){
-  if(!file||!file.type.startsWith('image/'))return;
+  if(!file)return;if(file.type&&!file.type.startsWith('image/'))return;
   const im=new Image();
   im.onload=()=>{
     S.img=im;S.iid=++IID;S.fedit=false;S.name=(file.name||'photo').replace(/\.[^.]+$/,'')||'photo';
@@ -93,7 +93,7 @@ function markChips(){
 }
 function dimsChanged(){readDims();markChips();if(S.img){applyMode();draw()}}
 
-$('file').onchange=e=>load(e.target.files[0]);
+$('file').onchange=e=>{const f=e.target.files[0];e.target.value='';load(f)};
 $('change').onclick=()=>{$('file').value='';$('file').click()};
 $('drop').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').click()}};
 ['dragenter','dragover'].forEach(n=>document.addEventListener(n,e=>{e.preventDefault();$('drop').classList.add('over')}));
