@@ -130,12 +130,19 @@ const safeName=s=>(s.replace(/[^\p{L}\p{N} ._()-]+/gu,'').trim())||'photo';
 const autoName=()=>safeName(S.name)+'-'+S.W+'x'+S.H+'px-'+stamp();
 function fileBase(){const v=$('fname').value.trim();return S.fedit&&v?safeName(v):autoName()}
 function syncName(){if(!S.fedit)$('fname').value=autoName();$('fext').textContent='.'+(ext[S.blob?S.blob.type:$('fmt').value]||'jpg')}
+const tracked=new Set();
+function track(k){
+  // counts only on the hosted site (the one with a canonical link), once per photo + setting
+  if(!document.querySelector('link[rel=canonical]')||tracked.has(k))return;
+  tracked.add(k);
+  try{fetch('/api/hit',{method:'POST',keepalive:true}).catch(()=>{})}catch(e){}
+}
 async function doDownload(){
   if(S.pending){clearTimeout(S.timer);await encode()}
   if(!S.blob)return;
   const a=document.createElement('a');a.href=URL.createObjectURL(S.blob);
   a.download=fileBase()+'.'+(ext[S.blob.type]||'jpg');
-  document.body.appendChild(a);a.click();a.remove();syncName();
+  document.body.appendChild(a);a.click();a.remove();syncName();track(S.iid+'|'+S.W+'x'+S.H+'|'+S.blob.type+'|'+$('lim').checked+$('kb').value);
 }
 $('dl').onclick=doDownload;
 let nt=0,ni=0;

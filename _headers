@@ -1,2 +1,6 @@
 /*
   Cache-Control: no-cache
+
+/counter.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
